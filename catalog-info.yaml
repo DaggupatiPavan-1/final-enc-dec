@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: final-enc-dec
+  description: final-enc-dec
+  annotations:
+    github.com/project-slug: DaggupatiPavan-1/final-enc-dec
+    argocd/app-name: final-enc-dec
+    backstage.io/kubernetes-namespace: dev
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/name=final-enc-dec
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - python
+    - fastapi
+    - docker
+    - api
+    - encryption
+    - security
+  links:
+    - url: http://localhost:8000/docs
+      title: Swagger UI
+      icon: docs
+    - url: http://localhost:8000
+      title: API Endpoint
+      icon: api
+spec:
+  type: service
+  owner: user:default/daggupatipavan
+  lifecycle: production
+
